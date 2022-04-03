@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install pylint
-      - run: pylint --disable=all --enable=unused-import $(git ls-files '*.py')
+      - run: pylint `ls -R|grep .py$|xargs`
       - name: Install pylint module & check python files
         uses: actions/checkout@v3
