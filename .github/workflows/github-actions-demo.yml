@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install pylint
-      - run: ls
+      - run: pylint .
       - name: Install pylint module & check python files
         uses: actions/checkout@v3
