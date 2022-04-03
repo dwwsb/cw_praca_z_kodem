@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install pylint
+      - name: Install pylint module
       - run: find . -name '*.py' -exec pylint {} \;
       - name: Check app.py pylint
         uses: actions/checkout@v3
