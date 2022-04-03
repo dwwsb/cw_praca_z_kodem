@@ -1,0 +1,10 @@
+name: WSB Github Workflow
+on: [push]
+jobs:
+  docker_python_versions:
+    runs-on: ubuntu-latest
+      steps:
+        - run: docker --version
+        - run: python --version
+        - name: Check docker & python versions
+        uses: actions/checkout@v3
