@@ -13,6 +13,5 @@ jobs:
     steps:
       - name: Install pylint module
       - run: pip install pylint
-      - name: Check app.py pylint
       - run: find . -name '*.py' -exec pylint {} \;
         uses: actions/checkout@v3
