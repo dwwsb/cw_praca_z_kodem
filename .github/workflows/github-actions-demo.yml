@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt install pylint
+      - run: cd ./cw_praca_z_kodem
       - run: pylint ./app.py
       - name: Check app.py pylint
         uses: actions/checkout@v3
