@@ -8,3 +8,10 @@ jobs:
       - run: python --version
       - name: Check docker & python versions
         uses: actions/checkout@v3
+  pylint_check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt install pylint
+      - run: pylint app.py
+      - name: Check app.py pylint
+        uses: actions/checkout@v3
