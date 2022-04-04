@@ -16,4 +16,4 @@ jobs:
       - name: Install pylint module
         run: pip install pylint
       - name: Pylint test app.py
-      - run: pylint app.py
+        run: pylint app.py
