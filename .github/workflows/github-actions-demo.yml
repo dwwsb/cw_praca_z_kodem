@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Use checkout@v3
         uses: actions/checkout@v3
-      - name: Install pylint module
-        run: pip install pylint
+      - name: Install requirements modules
+        run: pip install -r requirements.txt
       - name: Pylint test app.py
         run: pylint app.py
   build_docker_image:
