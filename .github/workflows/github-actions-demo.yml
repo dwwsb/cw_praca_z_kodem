@@ -23,6 +23,6 @@ jobs:
         - name: Use checkout@v3
           uses: actions/checkout@v3
         - name: Install docker
-        - run: pip install docker
+          run: pip install docker
         - name: Build docker image
-        - run: docker build --tag test-flask-app .
+          run: docker build --tag test-flask-app .
