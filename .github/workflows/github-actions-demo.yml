@@ -11,8 +11,9 @@ jobs:
   pylint_check:
     runs-on: ubuntu-latest
     steps:
-      - name: Install pylint module
+      - name: Use checkout@v3
         uses: actions/checkout@v3
-      - run: pip install pylint
+      - name: Install pylint module
+        run: pip install pylint
       - name: Pylint test app.py
       - run: pylint app.py
